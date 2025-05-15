@@ -14,43 +14,52 @@
     <h2>🏏 Upcoming Matches</h2>
   </div>
 
-  <!-- 🟡 Match Cards -->
-  <div class="container my-5">
-    <div class="row g-4">
-
-      <!-- Match Card 1 -->
-      <div class="col-md-6">
-        <div class="card shadow-sm border-0">
-          <div class="card-body">
-            <h5 class="card-title">🇱🇰 Sri Lanka vs 🇮🇳 India</h5>
-            <p class="card-text">
-              <strong>Date:</strong> May 18, 2025<br />
-              <strong>Time:</strong> 3:00 PM (IST)<br />
-              <strong>Venue:</strong> Colombo International Stadium
-            </p>
-            <p class="text-danger fw-bold">Starts In: <span id="countdown1"></span></p>
-            <a href="#" class="btn btn-outline-primary btn-sm">Match Details</a>
+<!-- Match Section -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">🏏 Upcoming Matches</h2>
+  
+  <div class="row g-4">
+    <!-- Match 1 -->
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <span class="badge bg-warning text-dark mb-2">Upcoming</span>
+          <h5 class="card-title d-flex align-items-center gap-2">
+            <img src="images/srilanka.png" alt="Sri Lanka" width="24" />
+            Sri Lanka vs
+            <img src="images/india.png" alt="India" width="24" />
+            India
+          </h5>
+          <p class="card-text mb-1">📍 Location: R. Premadasa Stadium, Colombo</p>
+          <p class="card-text mb-3">🗓️ Date: May 20, 2025 – 14:30</p>
+          <div class="alert alert-warning py-1 px-2 mb-0">
+            🕒 <strong>Starts In:</strong> <span id="countdown1"></span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Match Card 2 -->
-      <div class="col-md-6">
-        <div class="card shadow-sm border-0">
-          <div class="card-body">
-            <h5 class="card-title">🇱🇰 Sri Lanka vs 🇵🇰 Pakistan</h5>
-            <p class="card-text">
-              <strong>Date:</strong> May 25, 2025<br />
-              <strong>Time:</strong> 7:00 PM (IST)<br />
-              <strong>Venue:</strong> Galle Stadium
-            </p>
-            <a href="#" class="btn btn-outline-primary btn-sm">Match Details</a>
+    <!-- Match 2 -->
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-body">
+          <span class="badge bg-danger mb-2">LIVE</span>
+          <h5 class="card-title d-flex align-items-center gap-2">
+            <img src="images/srilanka.png" alt="Sri Lanka" width="24" />
+            Sri Lanka vs
+            <img src="images/pakistan.png" alt="Pakistan" width="24" />
+            Pakistan
+          </h5>
+          <p class="card-text mb-1">📍 Location: Galle International Stadium</p>
+          <p class="card-text mb-3">🗓️ Date: May 22, 2025 – 10:00</p>
+          <div class="alert alert-warning py-1 px-2 mb-0">
+            🕒 <strong>Starts In:</strong> <span id="countdown2"></span>
           </div>
         </div>
       </div>
-
     </div>
   </div>
+</section>
 
   <!-- Footer (Optional) -->
   <footer class="bg-dark text-white text-center py-3">
@@ -59,31 +68,34 @@
 
 </body>
 <script>
-  function startCountdown(id, matchDateTime) {
-    const countdownEl = document.getElementById(id);
-    const targetDate = new Date(matchDateTime).getTime();
-
-    setInterval(() => {
+  function startCountdown(id, matchDate) {
+    const countdownElement = document.getElementById(id);
+    function updateCountdown() {
       const now = new Date().getTime();
-      const timeLeft = targetDate - now;
+      const distance = new Date(matchDate).getTime() - now;
 
-      if (timeLeft <= 0) {
-        countdownEl.innerText = "Match Started";
+      if (distance < 0) {
+        countdownElement.innerHTML = "Started";
         return;
       }
 
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdownEl.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
+      countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   }
 
-  // ⏱ Start countdown for the match
-  startCountdown("countdown1", "May 18, 2025 15:00:00");
+  // Countdown Timers
+  startCountdown("countdown1", "May 20, 2025 14:30:00");
+  startCountdown("countdown2", "May 22, 2025 10:00:00");
 </script>
+
 
 </html>
 
