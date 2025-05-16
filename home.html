@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SLCF Official Website</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🌐 Navbar with Language Switch -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">SLCF Official</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="matches.html">🏏 Matches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">📰 News</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">🌐 Language</a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#" onclick="switchLang('en')">English</a></li>
+              <li><a class="dropdown-item" href="#" onclick="switchLang('si')">සිංහල</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 🏠 Hero Section -->
+  <header class="bg-primary text-white text-center py-5">
+    <h1 id="hero-title">Welcome to SLCF Official Website</h1>
+    <p id="hero-subtitle">Your hub for Sri Lanka cricket matches and news.</p>
+  </header>
+
+  <section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">🏏 Upcoming Matches</h2>
+    <div class="row g-4">
+      <!-- Match Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Sri Lanka 🇱🇰 vs India 🇮🇳</h5>
+            <p class="card-text">Date: June 5, 2025<br>Venue: R. Premadasa Stadium, Colombo</p>
+            <a href="matches.html" class="btn btn-primary">Match Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Match Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Sri Lanka 🇱🇰 vs Bangaladesh 🇵🇰</h5>
+            <p class="card-text">Date: June 12, 2025<br>Venue: Pallekele Stadium</p>
+            <a href="matches.html" class="btn btn-primary">Match Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Match Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">Sri Lanka 🇱🇰 vs England</h5>
+            <p class="card-text">Date: June 20, 2025<br>Venue: Galle International Stadium</p>
+            <a href="matches.html" class="btn btn-primary">Match Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 📰 Latest News Section -->
+<section class="bg-light py-5">
+  <div class="container">
+    <h2 class="mb-4">📰 Latest News</h2>
+    <div class="row">
+      <!-- News Card 1 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="news1.jpg" class="card-img-top" alt="News Image">
+          <div class="card-body">
+            <h5 class="card-title">Sri Lanka Wins Asia Cup 2025!</h5>
+            <p class="card-text">Sri Lanka defeated India in a thrilling final match...</p>
+            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- News Card 2 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="news2.jpg" class="card-img-top" alt="News Image">
+          <div class="card-body">
+            <h5 class="card-title">Avishka Fernando hits unbeaten 120</h5>
+            <p class="card-text">In an exciting match against Pakistan, Avishka scores big!</p>
+            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+      <!-- News Card 3 -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="news3.jpg" class="card-img-top" alt="News Image">
+          <div class="card-body">
+            <h5 class="card-title">New Talent Rising in U-19 SLCF Squad</h5>
+            <p class="card-text">Young players showing great promise for future tournaments.</p>
+            <a href="#" class="btn btn-primary btn-sm">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="text-center mb-4">🔴 Live Scores</h2>
+    <div class="row g-4">
+      <!-- Live Match 1 -->
+      <div class="col-md-6">
+        <div class="p-4 bg-secondary rounded shadow">
+          <h5>Sri Lanka vs India - 2nd ODI</h5>
+          <p>SL: 278/6 (45.2 ov)</p>
+          <p>IND: Yet to bat</p>
+          <span class="badge bg-danger">LIVE</span>
+        </div>
+      </div>
+
+      <!-- Live Match 2 -->
+      <div class="col-md-6">
+        <div class="p-4 bg-secondary rounded shadow">
+          <h5>Australia vs England - 1st Test</h5>
+          <p>AUS: 350/8 (90 ov)</p>
+          <p>ENG: 120/2 (40 ov)</p>
+          <span class="badge bg-success">Day 2</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">✅ Recent Match Results</h2>
+    <div class="row g-4">
+      <!-- Result Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow border-success">
+          <div class="card-body">
+            <h5 class="card-title">Sri Lanka vs India - 3rd ODI</h5>
+            <p class="card-text">
+              SL: 289/9 (50 ov)<br>
+              IND: 280/10 (49.3 ov)
+            </p>
+            <span class="badge bg-success">Sri Lanka won by 9 runs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow border-danger">
+          <div class="card-body">
+            <h5 class="card-title">Sri Lanka vs Australia - 1st T20</h5>
+            <p class="card-text">
+              SL: 140/8 (20 ov)<br>
+              AUS: 142/3 (18.4 ov)
+            </p>
+            <span class="badge bg-danger">Australia won by 7 wickets</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow border-secondary">
+          <div class="card-body">
+            <h5 class="card-title">England vs SL - Test Match</h5>
+            <p class="card-text">
+              ENG: 421 & 180<br>
+              SL: 212 & 202
+            </p>
+            <span class="badge bg-secondary">England won by innings & 87 runs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">📸 Gallery & 🎥 Highlights</h2>
+
+    <div class="row g-4">
+      <!-- Image 1 -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="sri-Lanka-cricket-team.jpg" class="card-img-top" alt="Gallery Image 1">
+          <div class="card-body">
+            <p class="card-text">Sri Lanka celebrates a thrilling victory at R. Premadasa Stadium.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <img src="chrith.jpg" class="card-img-top" alt="Gallery Image 2">
+          <div class="card-body">
+            <p class="card-text">Captain's press conference after the series win.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video 1 -->
+      <div class="col-md-4">
+        <div class="card shadow">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Match Highlights" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Watch match-winning highlights from the 2nd ODI 🇱🇰</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">🏏 Team Profiles</h2>
+    <div class="row g-4">
+
+      <!-- Player Card 1 -->
+      <div class="col-md-4">
+        <div class="card shadow text-center">
+          <img src="https://via.placeholder.com/200x250" class="card-img-top" alt="Player 1">
+          <div class="card-body">
+            <h5 class="card-title">Wanindu Hasaranga</h5>
+            <p class="card-text">All-Rounder<br>Right-hand bat | Leg-spin bowler</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Player Card 2 -->
+      <div class="col-md-4">
+        <div class="card shadow text-center">
+          <img src="https://via.placeholder.com/200x250" class="card-img-top" alt="Player 2">
+          <div class="card-body">
+            <h5 class="card-title">Kusal Mendis</h5>
+            <p class="card-text">Wicketkeeper-Batsman<br>Right-hand bat</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more players as needed -->
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">🏆 Points Table</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Team</th>
+            <th>Matches</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sri Lanka 🇱🇰</td>
+            <td>5</td>
+            <td>4</td>
+            <td>1</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>India 🇮🇳</td>
+            <td>5</td>
+            <td>3</td>
+            <td>2</td>
+            <td>6</td>
+          </tr>
+          <!-- Add more teams -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- ✨ Bootstrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
